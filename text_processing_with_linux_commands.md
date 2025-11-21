@@ -44,12 +44,16 @@ Correct screenshot should contain your github username in the shell, a command a
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
 
+![task 3](task3.png)
+
 **Explanation** Write the explanation why the specific command was used.
 
 ### 4. Which age is most frequent in fullnames_with_age.txt?
 
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
+
+![task 4](task4.png)
 
 **Explanation** Write the explanation why the specific command was used.
 
@@ -58,12 +62,16 @@ Correct screenshot should contain your github username in the shell, a command a
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
 
+![task 5](task5.png)
+
 **Explanation** Write the explanation why the specific command was used.
 
 ### 6. How many unique users are in app_small.log?
 
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
+
+![task 6](task6.png)
 
 **Explanation** Write the explanation why the specific command was used.
 
@@ -72,6 +80,8 @@ Correct screenshot should contain your github username in the shell, a command a
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
 
+![task 7](task7.png)
+
 **Explanation** Write the explanation why the specific command was used.
 
 ### 8. What is the top 3 most common modules in app_small.log?
@@ -79,11 +89,15 @@ Correct screenshot should contain your github username in the shell, a command a
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
 
+![task 8](task8.png)
+
 **Explanation** Write the explanation why the specific command was used.
 
 ### 9. Which task appears most often in system_small.log?
 
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
+
+![task 9](task9.png)
 
 **Explanation** Write the explanation why the specific command was used.
