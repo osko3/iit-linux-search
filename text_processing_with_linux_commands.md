@@ -32,7 +32,12 @@ Correct screenshot should contain your github username in the shell, a command a
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
 
-**Explanation** Write the explanation why the specific command was used.
+![task 2](task2.png)
+
+**Explanation** 
+- grep searches for lines that contain /login.
+- wc command is to count data in a given file. 
+- -1 parameter is for counting lines.
 
 ### 3. How many occurrences of Smith are in fullnames_simple.txt?
 
