@@ -84,7 +84,7 @@ Correct screenshot should contain your github username in the shell, a command a
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
 
-![task 6](task6.png)
+![task 6](task6n.png)
 
 **Explanation** Write the explanation why the specific command was used.
 
