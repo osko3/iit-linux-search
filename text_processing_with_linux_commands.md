@@ -21,9 +21,9 @@ Correct screenshot should contain your github username in the shell, a command a
 ![task 1](task1.png)
 
 **Explanation** 
-- grep searches for lines that contain /login.
-- wc command is to count data in a given file. 
-- -1 parameter is for counting lines.
+- grep searches through the file and selects every line that contains the text /login.
+- The output from grep is then sent into wc -l, which counts how many lines were found.
+- This gives the total number of log entries where the path /login appears.
 
 ---
 
@@ -35,9 +35,9 @@ Correct screenshot should contain your github username in the shell, a command a
 ![task 2](task2.png)
 
 **Explanation** 
-- grep searches for lines that contain the word “Smith”.
-- wc command is to count data in a given file. 
-- -1 parameter is for counting lines.
+- grep scans the file and finds every line that includes the word Smith.
+- The result is piped into wc -l, which counts how many lines contain at least one occurrence of Smith.
+- This produces the total number of matching lines.
 
 ### 3. How many occurrences of Smith are in fullnames_simple.txt?
 
@@ -47,9 +47,9 @@ Correct screenshot should contain your github username in the shell, a command a
 ![task 3](task3.png)
 
 **Explanation** 
-- grep searches for lines that contain the word “Smith”.
-- wc command is to count data in a given file. 
-- -1 parameter is for counting lines.
+- grep scans the file and finds every line that includes the word Smith.
+- The result is piped into wc -l, which counts how many lines contain at least one occurrence of Smith.
+- This produces the total number of matching lines.
 
 ### 4. Which age is most frequent in fullnames_with_age.txt?
 
@@ -59,11 +59,11 @@ Correct screenshot should contain your github username in the shell, a command a
 ![task 4](task4.png)
 
 **Explanation** 
-- cut takes the column that has the age.
-- sort puts all ages in order.
+- cut -d ' ' -f 3 extracts the third space-separated column from each line, which contains the age.
+- sort arranges all ages in order.
 - uniq -c counts how many times each age appears.
-- sort -nr sorts the counts from biggest to smallest.
-- head -1 shows the most common age.
+- sort -nr sorts these counts from highest to lowest.
+- head -1 displays the age with the highest frequency.
 
 ### 5. Show the 10 most common names (first+last) in fullnames_with_agetxt.
 
@@ -73,11 +73,11 @@ Correct screenshot should contain your github username in the shell, a command a
 ![task 5](task5.png)
 
 **Explanation** 
-- cut takes the first name and last name.
-- sort arranges the names alphabetically.
+- cut -d ' ' -f 1,2 extracts the first and last name from each line.
+- sort arranges all names alphabetically.
 - uniq -c counts how many times each name appears.
-- sort -nr sorts the results from most to least common.
-- head -10 shows the top ten names.
+- sort -nr orders these counts from most to least frequent.
+- head -10 displays the ten most common names.
 
 ### 6. How many unique users are in app_small.log?
 
@@ -87,11 +87,11 @@ Correct screenshot should contain your github username in the shell, a command a
 ![task 6](task6n.png)
 
 **Explanation** 
-- cut takes the field that has user=....
-- The second cut removes user= and keeps only the user ID.
-- sort sorts all user IDs.
-- uniq removes duplicates so only unique IDs remain.
-- wc -l counts how many unique users there are.
+- The first cut -d '=' -f 2 takes the part of each line after the = sign, which contains the user ID.
+- The second cut -d ' ' -f 1 removes anything after the user ID so only the ID remains.
+- sort arranges all user IDs.
+- uniq removes duplicates so each user ID appears only once.
+- wc -l counts the number of unique user IDs.
 
 ### 7. Which status code appears most often in access_medium.log? 
 
@@ -101,11 +101,11 @@ Correct screenshot should contain your github username in the shell, a command a
 ![task 7](task7n.png)
 
 **Explanation** 
-- cut takes the status code column from the log.
-- sort arranges the status codes.
-- uniq -c counts the number of times each code appears.
-- sort -nr sorts them from most frequent to least frequent.
-- head -1 shows the most common status code.
+- cut -d ' ' -f 5 extracts the fifth space-separated field, which holds the status code.
+- sort arranges the codes.
+- uniq -c counts how many times each unique status code appears.
+- sort -nr orders the codes from most frequent to least.
+- head -1 shows the single most common status code.
 
 ### 8. What is the top 3 most common modules in app_small.log?
 
@@ -115,12 +115,12 @@ Correct screenshot should contain your github username in the shell, a command a
 ![task 8](task8n.png)
 
 **Explanation** 
-- cut extracts the field that contains module=....
-- The second cut removes the text before = and leaves only the module name.
-- sort sorts all module names.
+- tr -s ' ' compresses repeated spaces into a single space so fields line up correctly.
+- cut -d ' ' -f 3 extracts the third column, which contains the module name.
+- sort arranges all module names.
 - uniq -c counts how many times each module appears.
-- sort -nr sorts these counts from biggest to smallest.
-- head -3 shows the top three modules.
+- sort -nr sorts these counts from highest to lowest.
+- head -3 shows the three most common modules.
 
 ### 9. Which task appears most often in system_small.log?
 
@@ -130,9 +130,12 @@ Correct screenshot should contain your github username in the shell, a command a
 ![task 9](task9n.png)
 
 **Explanation** 
-- cut extracts the field that contains task=....
-- The second cut removes the task= part.
+- grep 'task-' selects only lines that contain a task identifier.
+- cut -d ' ' -f 4,5 extracts the fields where the task values appear.
+- tr ' ' '\n' places each token on a separate line so tasks can be isolated.
+- grep 'task-' filters out only the tokens that contain task information.
+- cut -d '-' -f 2 extracts the task name after the task- prefix.
 - sort arranges all task names.
 - uniq -c counts how many times each task appears.
-- sort -nr sorts the results from the most common task to the least.
+- sort -nr orders tasks from most to least common.
 - head -1 shows the most frequent task.
