@@ -98,7 +98,7 @@ Correct screenshot should contain your github username in the shell, a command a
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
 
-![task 7](task7.png)
+![task 7](task7n.png)
 
 **Explanation** 
 - cut takes the status code column from the log.
@@ -112,7 +112,7 @@ Correct screenshot should contain your github username in the shell, a command a
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
 
-![task 8](task8.png)
+![task 8](task8n.png)
 
 **Explanation** 
 - cut extracts the field that contains module=....
@@ -127,7 +127,7 @@ Correct screenshot should contain your github username in the shell, a command a
 Put screenshot from Codespaces illustrating the result here.
 Correct screenshot should contain your github username in the shell, a command and the result.
 
-![task 9](task9.png)
+![task 9](task9n.png)
 
 **Explanation** 
 - cut extracts the field that contains task=....
